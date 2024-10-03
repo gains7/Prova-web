@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "es2020",                // Definindo a versão mais moderna do JavaScript
+    "module": "esnext",                // Usando módulos ES (em vez de CommonJS)
+    "rootDir": "./src",                // Diretório raiz do código TypeScript
+    "outDir": "./dist",                // Diretório de saída para o código compilado
+    "moduleResolution": "node",        // Resolução de módulos usando a lógica do Node.js
+    "esModuleInterop": true,           // Habilita compatibilidade entre módulos CommonJS e ES
+    "strict": true,                    // Habilita o modo estrito para maior segurança do código
+    "noImplicitAny": false,            // Permite uso de "any" implícito (relaxa a restrição)
+    "skipLibCheck": true,              // Pula a checagem de tipos das bibliotecas
+    "forceConsistentCasingInFileNames": true, // Força consistência de capitalização nos imports
+    "resolveJsonModule": true,         // Permite importar arquivos JSON como módulos
+    "noUnusedLocals": true,            // Mostra erro para variáveis locais não usadas
+    "noUnusedParameters": true,        // Mostra erro para parâmetros de função não usados
+    "removeComments": false,           // Não remove comentários do código compilado
+    "sourceMap": true,                 // Gera arquivos de source map
+    "baseUrl": ".",                    // Define o diretório base para resolver caminhos relativos
+    "paths": {
+      "@utils/*": ["src/utils/*"],     // Mapeia atalhos para resolver caminhos personalizados
+      "@components/*": ["src/components/*"]
+    }
+  },
+  "include": ["src/**/*"],             // Inclui todos os arquivos TypeScript do diretório `src`
+  "exclude": ["node_modules", "build"] // Exclui pastas que não devem ser compiladas
+}
